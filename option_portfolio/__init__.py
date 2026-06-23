@@ -1,7 +1,7 @@
 """
 Option Portfolio Optimization under Skew-Elliptical t Returns
 
-Implementation of Sung & Pirvu (2026) "Sharpe Ratio and Return-VaR Ratio 
+Implementation of Sung & Pirvu (2026) "Sharpe Ratio and Return-VaR Ratio
 Maximization for Option Portfolios with Skew-Elliptical t Underlying Returns"
 
 Main classes:
@@ -21,5 +21,5 @@ __all__ = [
     "OptionPortfolioOptimizer",
     "SkewTFitter",
     "BlackScholesGreeks",
-    "DeltaGammaPortfolio"
+    "DeltaGammaPortfolio",
 ]
