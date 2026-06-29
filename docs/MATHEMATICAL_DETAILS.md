@@ -1,4 +1,4 @@
-# Mathematical Details (Corrected and Complete)
+# Mathematical Details
 
 Complete and rigorous mathematical exposition with full formulas from Sung & Pirvu (2026).
 
@@ -16,21 +16,21 @@ A random vector $\mathbf{X} = (X_1, \ldots, X_N)$ follows a multivariate skew-el
 - Degrees of freedom $\nu \in \mathbb{R}$, $\nu > 0$
 - Skewness parameter $\boldsymbol{\omega} \in \mathbb{R}^N$
 
-### Why Skew-$t$?
+### Why Skew-*t*?
 
 **Normal distribution assumption underestimates tail risk:**
 
 | Distribution | $P(X > 5\sigma)$ |
 |---|---|
 | Normal | $\approx 10^{-7}$ (1 in 3.5 million) |
-| $t_6$ (skew-$t$ in paper) | $\approx 10^{-4}$ (1 in 10,000) |
+| $t_6$ (skew-*t* in paper) | $\approx 10^{-4}$ (1 in 10,000) |
 | Real markets | $\approx 10^{-4}$ (empirical) |
 
 **Skewness matters:** Left tail heavier than right (negative skew in equities). Options have different values depending on tail direction.
 
 ### Distribution Characterization
 
-The skew-$t$ distribution is characterized by two key constants:
+The skew-*t* distribution is characterized by two key constants:
 
 $$c = \sqrt{\frac{\nu}{\pi}} \frac{\Gamma\left(\frac{\nu-1}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)}$$
 
@@ -71,11 +71,11 @@ The approximation error is $O(\|\Delta \mathbf{S}\|^3)$. For typical daily moves
 
 ---
 
-## 3. Expected P&L and Variance Under Skew-$t$ Returns
+## 3. Expected P&L and Variance Under Skew-*t* Returns
 
 ### Assumption (Page 3)
 
-**Assumption 2.2:** Underlying returns follow skew-$t$:
+**Assumption 2.2:** Underlying returns follow skew-*t*:
 
 $$\Delta \mathbf{S} \sim t_{\text{skew}}^N(\boldsymbol{\mu}, \boldsymbol{\Sigma}, \nu, \boldsymbol{\omega})$$
 
@@ -383,7 +383,7 @@ $$\lim_{\nu \to \infty, \boldsymbol{\omega} \to \mathbf{0}} t_{\text{skew}}^N(\b
 - All skewness terms in $\mathbf{u}$ and $\mathbf{Q}$ vanish
 - Reduces to standard Markowitz theory
 
-### Case 2: Student-$t$ ($\boldsymbol{\omega} = \mathbf{0}$, $\nu$ fixed)
+### Case 2: Student-*t* ($\boldsymbol{\omega} = \mathbf{0}$, $\nu$ fixed)
 
 Pure heavy tails without skewness:
 
@@ -407,10 +407,10 @@ Optimal weights still depend on degree of tail heaviness $\nu$.
 | $\boldsymbol{\delta}$ | Delta matrix | $(M, N)$ | Black-Scholes |
 | $\boldsymbol{\Gamma}$ | Gamma tensor | $(M, N, N)$ | Black-Scholes |
 | $\boldsymbol{\theta}$ | Theta vector | $(M,)$ | Black-Scholes |
-| $\boldsymbol{\mu}$ | Location vector (skew-$t$) | $(N,)$ | Fit |
-| $\boldsymbol{\Sigma}$ | Scale matrix (skew-$t$) | $(N, N)$ | Fit |
+| $\boldsymbol{\mu}$ | Location vector (skew-*t*) | $(N,)$ | Fit |
+| $\boldsymbol{\Sigma}$ | Scale matrix (skew-*t*) | $(N, N)$ | Fit |
 | $\nu$ | Degrees of freedom | scalar | Fit |
-| $\boldsymbol{\omega}$ | Skewness vector (skew-$t$) | $(N,)$ | Fit |
+| $\boldsymbol{\omega}$ | Skewness vector (skew-*t*) | $(N,)$ | Fit |
 | $r_f$ | Risk-free rate | scalar | Given |
 | $T$ | Time to expiry | scalar | Given |
 | $\Delta t$ | Time step | scalar | Given |
