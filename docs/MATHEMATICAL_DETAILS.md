@@ -195,8 +195,6 @@ $$\text{CFVaR}_\alpha[\Delta V(\mathbf{x})] = -\mathbf{u}^T \mathbf{x} - N^{-1}(
 
 $$\mathbf{x}^{\ast}_{\text{R-VaR}^{\alpha}_{2}} = \frac{\mathbf{Q}^{-1}[(1 - \lambda^{\ast}) \mathbf{u} - r_f \mathbf{v}]}{\mathbf{v}^T \mathbf{Q}^{-1}[(1 - \lambda^{\ast}) \mathbf{u} - r_f \mathbf{v}]}$$
 
-$\mathbf{x}^{\ast}_{{R-VaR}^{\alpha}_{2}}$
-
 where $\lambda^{\ast}$ is the optimal scaling parameter determined in **Appendix B.2**.
 
 ### Detailed Derivation (Appendix B.2, Pages 12-13)
