@@ -106,7 +106,7 @@ $$\text{Sharpe}[\Delta V(\mathbf{x})] = \frac{\mathbf{u}^T \mathbf{x} - r_f}{\sq
 
 ### Solution: Theorem 3.1 (Page 5, Equation 7)
 
-$$\mathbf{x}^*_{\text{Sharpe}} = \frac{\mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}{\mathbf{v}^T \mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}$$
+$$\mathbf{x}^{\text{*}}_{\text{Sharpe}} = \frac{\mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}{\mathbf{v}^T \mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}$$
 
 ### Detailed Derivation (Appendix B.1, Pages 11-12)
 
@@ -162,13 +162,13 @@ $$\frac{d}{d\lambda_1}\left[\frac{\mathbf{u}^T \mathbf{x}(\lambda_1) - r_f}{\sqr
 
 **Step 7: Closed-form solution**
 
-The optimal $\lambda_1^*$ satisfies:
+The optimal $\lambda_1^{\text{*}}$ satisfies:
 
-$$\lambda_1^* = -r_f$$
+$$\lambda_1^{\text{*}} = -r_f$$
 
-Substituting $\lambda_1^* = -r_f$ into the expression for $\mathbf{x}(\lambda_1)$:
+Substituting $\lambda_1^{\text{*}} = -r_f$ into the expression for $\mathbf{x}(\lambda_1)$:
 
-$$\mathbf{x}^*_{\text{Sharpe}} = \frac{\mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}{\mathbf{v}^T \mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}$$
+$$\mathbf{x}^{\text{*}}_{\text{Sharpe}} = \frac{\mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}{\mathbf{v}^T \mathbf{Q}^{-1}(\mathbf{u} - r_f \mathbf{v})}$$
 
 This is **Theorem 3.1** from page 5, Equation (7).
 
@@ -193,11 +193,11 @@ $$\text{CFVaR}_\alpha[\Delta V(\mathbf{x})] = -\mathbf{u}^T \mathbf{x} - N^{-1}(
 
 ### Solution: Theorem 3.2 (Page 5, Equation 8)
 
-$$\mathbf{x}^{\ast}_{\text{R-VaR}^{\alpha}_{2}} = \frac{\mathbf{Q}^{-1}[(1 - \lambda^*) \mathbf{u} - r_f \mathbf{v}]}{\mathbf{v}^T \mathbf{Q}^{-1}[(1 - \lambda^*) \mathbf{u} - r_f \mathbf{v}]}$$
+$$\mathbf{x}^{\text{*}}_{\text{R-VaR}^{\alpha}_{2}} = \frac{\mathbf{Q}^{-1}[(1 - \lambda^{\text{*}}) \mathbf{u} - r_f \mathbf{v}]}{\mathbf{v}^T \mathbf{Q}^{-1}[(1 - \lambda^{\text{*}}) \mathbf{u} - r_f \mathbf{v}]}$$
 
-$\mathbf{x}^*_{{R-VaR}^{\alpha}_{2}}$
+$\mathbf{x}^{\text{*}}_{{R-VaR}^{\alpha}_{2}}$
 
-where $\lambda^*$ is the optimal scaling parameter determined in **Appendix B.2**.
+where $\lambda^{\text{*}}$ is the optimal scaling parameter determined in **Appendix B.2**.
 
 ### Detailed Derivation (Appendix B.2, Pages 12-13)
 
@@ -277,19 +277,19 @@ The critical points are:
 
 $$\varepsilon_{\pm} = \frac{-B_{\text{crit}} \pm \sqrt{B_{\text{crit}}^2 - 4 A_{\text{crit}} C_{\text{crit}}}}{2 A_{\text{crit}}}$$
 
-**Step 9: Select optimal** $\varepsilon^*$
+**Step 9: Select optimal** $\varepsilon^{\text{*}}$
 
 Choose the root that maximizes $f(\varepsilon)$. (Paper discusses conditions on page 13.)
 
 **Step 10: Retrieve optimal portfolio**
 
-$$\mathbf{x}^* = \mathbf{x}(\varepsilon^*)$$
+$$\mathbf{x}^{\text{*}} = \mathbf{x}(\varepsilon^{\text{*}})$$
 
 Through algebraic simplification, this yields:
 
-$$\mathbf{x}^*_{\text{R-VaR}_\alpha} = \frac{\mathbf{Q}^{-1}[(1 - \lambda^*) \mathbf{u} - r_f \mathbf{v}]}{\mathbf{v}^T \mathbf{Q}^{-1}[(1 - \lambda^*) \mathbf{u} - r_f \mathbf{v}]}$$
+$$\mathbf{x}^{\text{*}}_{\text{R-VaR}_\alpha} = \frac{\mathbf{Q}^{-1}[(1 - \lambda^{\text{*}}) \mathbf{u} - r_f \mathbf{v}]}{\mathbf{v}^T \mathbf{Q}^{-1}[(1 - \lambda^{\text{*}}) \mathbf{u} - r_f \mathbf{v}]}$$
 
-where the parameter $\lambda^*$ relates $\varepsilon^*$ to the structural form. (Definition in Appendix B.2.)
+where the parameter $\lambda^{\text{*}}$ relates $\varepsilon^{\text{*}}$ to the structural form. (Definition in Appendix B.2.)
 
 ---
 
@@ -417,7 +417,7 @@ Optimal weights still depend on degree of tail heaviness $\nu$.
 | $T$ | Time to expiry | scalar | Given |
 | $\Delta t$ | Time step | scalar | Given |
 | $\varepsilon$ | Standard deviation (Sharpe) or expected return (R-VaR) | scalar | Parametrization |
-| $\lambda^*$ | Optimal scaling parameter (R-VaR) | scalar | Appendix B.2 |
+| $\lambda^{\text{*}}$ | Optimal scaling parameter (R-VaR) | scalar | Appendix B.2 |
 | $N^{-1}(\alpha)$ | Inverse standard normal CDF at level $\alpha$ | scalar | VaR |
 | $\alpha$ | VaR confidence level (e.g., 0.01) | scalar | Given |
 | $c$ | Skewness normalization constant | scalar | Definition |
